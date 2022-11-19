@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 500ms ease-in;
+    opacity: 0.5;
+}
+
+.card h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    text-transform: capitalize;
+}
+
+.container .card .active {
+    flex: 5;
+    opacity: 1;
+}
+
+.container .card .active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.container .card:nth-child(1) {
+    background-image: url('../img/image-01.jpg');
+}
+
+.container .card:nth-child(2) {
+    background-image: url('../img/image-02.jpg');
+}
+
+.container .card:nth-child(3) {
+    background-image: url('../img/image-03.jpg');
+}
+
+.container .card:nth-child(4) {
+    background-image: url('../img/image-04.jpg');
+}
+
+.container .card:nth-child(5) {
+    background-image: url('../img/image-05.jpg');
+}
+
+.container .card:nth-child(6) {
+    background-image: url('../img/image-06.jpg');
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .container .card:nth-child(4),
+    .container .card:nth-child(5) {
+        display: none;
+    }
+}
